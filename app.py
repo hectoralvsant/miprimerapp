@@ -1,6 +1,3 @@
-# Create Streamlit app files for the user to deploy from GitHub
-
-app_py = r'''
 import random
 import re
 import streamlit as st
@@ -23,14 +20,12 @@ def nueva_ecuacion():
 
 def pretty_latex(a, b, c):
     # Construye un string LaTeX ordenado como ax + b = c (manejando signos)
-    # a x term
     if a == 1:
         ax = "x"
     elif a == -1:
         ax = "-x"
     else:
         ax = f"{a}x"
-    # b term with sign
     if b == 0:
         left = ax
     elif b > 0:
@@ -78,7 +73,6 @@ if verificar:
         valor = int(answer.strip())
         if valor == x_sol:
             st.success("¡Correcto! 🎯")
-            # Confeti con emojis de celebración
             rain(emoji="🎉", font_size=40, falling_speed=5, animation_length="3")
             st.session_state.correcta = True
         else:
@@ -95,4 +89,3 @@ with st.expander("Mostrar solución"):
     )
 
 st.caption("Hecho con ❤️ en Streamlit.")
-

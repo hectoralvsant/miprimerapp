@@ -95,24 +95,4 @@ with st.expander("Mostrar solución"):
     )
 
 st.caption("Hecho con ❤️ en Streamlit.")
-'''
 
-requirements_txt = """streamlit>=1.31
-streamlit-extras>=0.4.0
-"""
-
-readme_md = r"""
-# App de Ecuaciones de 1er Grado (Streamlit)
-
-Una app sencilla para practicar ecuaciones lineales de la forma `ax + b = c` con solución entera.
-
-## Características
-- Genera ecuaciones aleatorias con solución entera.
-- Campo de respuesta que **solo acepta enteros** (validación por regex).
-- Botón **Verificar** y **Nueva ecuación**.
-- **Animación de confeti** (emojis 🎉) al acertar usando `streamlit-extras`.
-
-## Ejecutar en local
-```bash
-pip install -r requirements.txt
-streamlit run app.py

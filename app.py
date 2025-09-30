@@ -73,7 +73,7 @@ with col2:
 
 if nueva:
     nueva_ecuacion()
-    st.experimental_rerun()
+    st.rerun()
 
 if verificar:
     if not es_entero(answer or ""):

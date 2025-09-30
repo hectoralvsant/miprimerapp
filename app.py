@@ -16,7 +16,16 @@ def nueva_ecuacion():
     st.session_state.eq = {"a": a, "b": b, "c": c, "x": x}
     st.session_state.feedback = ""
     st.session_state.correcta = None
-    st.session_state.answer = ""
+
+def nueva_ecuacion():
+    x = random.randint(-20, 20)
+    a_choices = [i for i in range(-9, 10) if i != 0]
+    a = random.choice(a_choices)
+    b = random.randint(-30, 30)
+    c = a * x + b
+    st.session_state.eq = {"a": a, "b": b, "c": c, "x": x}
+    st.session_state.feedback = ""
+    st.session_state.correcta = None
 
 def pretty_latex(a, b, c):
     # Construye un string LaTeX ordenado como ax + b = c (manejando signos)
